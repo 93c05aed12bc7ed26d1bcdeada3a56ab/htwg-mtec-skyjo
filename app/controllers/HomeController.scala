@@ -1,5 +1,8 @@
 package controllers
 
+import java.util.logging.LogManager
+
+import de.htwg.se.skyjo.model.{Deck, Player}
 import javax.inject._
 import play.api._
 import play.api.mvc._
@@ -11,6 +14,10 @@ import play.api.mvc._
 @Singleton
 class HomeController @Inject()(cc: ControllerComponents) extends AbstractController(cc) {
 
+  val hand = Player("Dennis", new Deck()).hand.toString()
+
+  Logger.logger.error(hand)
+
   /**
    * Create an Action to render an HTML page.
    *
@@ -20,6 +27,10 @@ class HomeController @Inject()(cc: ControllerComponents) extends AbstractControl
    */
   def index() = Action { implicit request: Request[AnyContent] =>
     Ok(views.html.index())
+  }
+
+  def skyjo = Action {
+    Ok("Hello")
   }
 
 }

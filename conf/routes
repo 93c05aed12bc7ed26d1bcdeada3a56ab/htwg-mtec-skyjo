@@ -5,6 +5,10 @@
 
 # An example controller showing a sample home page
 GET     /                           controllers.HomeController.skyjo
+GET     /playerList                 controllers.HomeController.playerList
+
+POST    /uncover/:posX/:posY/:player                    controllers.HomeController.uncover(posX:Int, posY: Int, player:Int)
+POST    /newPlayer/:player                  controllers.HomeController.addPlayer(player: String)
 GET     /about                      controllers.HomeController.about
 
 # Map static resources from the /public folder to the /assets URL path

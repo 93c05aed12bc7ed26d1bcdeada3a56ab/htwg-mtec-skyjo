@@ -1,6 +1,5 @@
 package controllers
 
-import de.htwg.se.skyjo.Skyjo
 import javax.inject._
 import play.api.mvc._
 
@@ -8,16 +7,13 @@ import play.api.mvc._
 class HomeController @Inject()(cc: ControllerComponents) extends AbstractController(cc) {
 
   val gameController = Skyjo.controller
-  gameController.createPlayer("Dennis")
-  gameController.createPlayer("Matthias")
-  val hand = gameController.boardToString()
 
   def about() = Action {
     Ok(views.html.index())
   }
 
   def skyjo = Action {
-    Ok(hand)
+    Ok(gameController.boardToString())
   }
 
   def playerList = Action {

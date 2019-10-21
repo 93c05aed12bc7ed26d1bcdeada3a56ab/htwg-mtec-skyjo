@@ -1,5 +1,6 @@
 package controllers
 
+import de.htwg.se.skyjo.Skyjo
 import javax.inject._
 import play.api.mvc._
 

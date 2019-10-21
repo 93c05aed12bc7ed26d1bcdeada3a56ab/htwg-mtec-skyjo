@@ -1,0 +1,36 @@
+@(controller:de.htwg.se.skyjo.controller.controllerBaseImpl.Controller)
+
+@players = @{controller.players}
+
+@main("HTWG Skyjo") {
+<div class="gamecontainer">
+    <div class="game">
+        @for(player <- 0 until players.length) {
+        <div class="player">
+            <p>@players(player).name</p>
+            <table border="1" frame="box">
+                <tr>
+                    <td>@players(player).hand.cards(0)(0).getValue</td>
+                    <td>@players(player).hand.cards(0)(1).getValue</td>
+                    <td>@players(player).hand.cards(0)(2).getValue</td>
+                    <td>@players(player).hand.cards(0)(3).getValue</td>
+                </tr>
+                <tr>
+                    <td>@players(player).hand.cards(1)(0).getValue</td>
+                    <td>@players(player).hand.cards(1)(1).getValue</td>
+                    <td>@players(player).hand.cards(1)(2).getValue</td>
+                    <td>@players(player).hand.cards(1)(3).getValue</td>
+                </tr>
+                <tr>
+                    <td>@players(player).hand.cards(1)(0).getValue</td>
+                    <td>@players(player).hand.cards(1)(1).getValue</td>
+                    <td>@players(player).hand.cards(1)(2).getValue</td>
+                    <td>@players(player).hand.cards(1)(3).getValue</td>
+                </tr>
+            </table>
+        </div>
+        <p>-----------------------</p>
+        }
+    </div>
+</div>
+}

@@ -14,7 +14,7 @@ class HomeController @Inject()(cc: ControllerComponents) extends AbstractControl
   }
 
   def skyjo = Action {
-    Ok(gameController.boardToString())
+    Ok(views.html.game(gameController))
   }
 
   def playerList = Action {

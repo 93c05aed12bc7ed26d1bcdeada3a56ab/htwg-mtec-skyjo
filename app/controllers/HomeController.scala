@@ -23,13 +23,13 @@ class HomeController @Inject()(cc: ControllerComponents) extends AbstractControl
 
   def addPlayer(player: String) = Action {
     gameController.createPlayer(player)
-    Ok("Successful created Player: " + player)
+    Ok(views.html.game(gameController))
   }
 
   def uncover(posX: Int, posY: Int, player: Int) = Action {
     gameController.setCursor(posX, posY, gameController.players(player))
     gameController.uncoverCard(gameController.players(player))
-    Ok("Uncovered Card for Player: " + player)
+    Ok(views.html.game(gameController))
   }
 
 }

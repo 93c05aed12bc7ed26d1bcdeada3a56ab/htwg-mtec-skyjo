@@ -36,41 +36,45 @@
             </div>
         </div>
     </nav>
-    <div class="game">
-        <h1>HTWG Skyjo</h1>
-        @for(player <- 0 until players.length) {
-        <div class="player">
-            <table>
-                <tr>
-                    <th colspan="4">@players(player).name</th>
-                </tr>
-                <tr>
-                    <td>@players(player).hand.cards(0)(0).getValue</td>
-                    <td>@players(player).hand.cards(0)(1).getValue</td>
-                    <td>@players(player).hand.cards(0)(2).getValue</td>
-                    <td>@players(player).hand.cards(0)(3).getValue</td>
-                </tr>
-                <tr>
-                    <td>@players(player).hand.cards(1)(0).getValue</td>
-                    <td>@players(player).hand.cards(1)(1).getValue</td>
-                    <td>@players(player).hand.cards(1)(2).getValue</td>
-                    <td>@players(player).hand.cards(1)(3).getValue</td>
-                </tr>
-                <tr>
-                    <td>@players(player).hand.cards(2)(0).getValue</td>
-                    <td>@players(player).hand.cards(2)(1).getValue</td>
-                    <td>@players(player).hand.cards(2)(2).getValue</td>
-                    <td>@players(player).hand.cards(2)(3).getValue</td>
-                </tr>
-            </table>
-        </div>
-        }
-        <div class="stats">
-            <p class="statsheadline">Punkte:</p>
+
+    <div class="container-fluid">
+        <div class="row gameboard">
             @for(player <- 0 until players.length) {
-            <p class="statsplayer">@players(player).name: 0</p>
+                <div class="player">
+                    <div class="container-fluid player-table">
+                        <div class="row-4 player-row">
+                            <div class="col player-name"> @players(player).name </div>
+                        </div>
+                        <div class="row player-row">
+                            <div class="col-5 player-col"> @players(player).hand.cards(0)(0).getValue </div>
+                            <div class="col-5 player-col"> @players(player).hand.cards(0)(1).getValue </div>
+                            <div class="col-5 player-col"> @players(player).hand.cards(0)(2).getValue </div>
+                            <div class="col-5 player-col"> @players(player).hand.cards(0)(3).getValue </div>
+                        </div>
+                        <div class="row player-row">
+                            <div class="col-5 player-col"> @players(player).hand.cards(1)(0).getValue </div>
+                            <div class="col-5 player-col"> @players(player).hand.cards(1)(1).getValue </div>
+                            <div class="col-5 player-col"> @players(player).hand.cards(1)(2).getValue </div>
+                            <div class="col-5 player-col"> @players(player).hand.cards(1)(3).getValue </div>
+                        </div>
+                        <div class="row player-row">
+                            <div class="col-5 player-col"> @players(player).hand.cards(2)(0).getValue </div>
+                            <div class="col-5 player-col"> @players(player).hand.cards(2)(1).getValue </div>
+                            <div class="col-5 player-col"> @players(player).hand.cards(2)(2).getValue </div>
+                            <div class="col-5 player-col"> @players(player).hand.cards(2)(3).getValue </div>
+                        </div>
+                    </div>
+                </div>
             }
+            <div class="scoreboard">
+                <div class="scoreboard-head">Scoreboard:</div>
+                @for(player <- 0 until players.length) {
+                    <div class="scoreboard-player">@players(player).name: 0</div>
+                }
+            </div>
+
         </div>
     </div>
+
 </div>
 }

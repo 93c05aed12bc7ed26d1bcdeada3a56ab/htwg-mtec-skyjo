@@ -19,15 +19,13 @@
     background-color: black;
 }
 
-div.player table, div.player td {
-    border: 2px solid black;
-}
-div.player th {
+.gameboard {
     font-size: 24px;
-    height: 50px;
+    font-family: "Verdana",Geneva, sans-serif;
 }
-
-div.player table {
+.player {
+}
+.player-table {
     width: 200px;
     height: 250px;
     border-collapse: collapse;
@@ -35,38 +33,31 @@ div.player table {
     float: left;
     margin: 50px;
 }
-
-div.player td {
+.player-name {
+    border: 2px solid black;
+}
+.player-row {
+    font-size: 24px;
+    height: 50px;
     vertical-align: middle;
     text-align: center;
     font-size: 40px;
 }
-
-div.player td:hover {
+.player-col {
+    border: 2px solid black;
+}
+.player-col:hover {
     background-color: black;
     color: white;
 }
-
-div.player p {
-    font-size: 24px;
-    font-family: "Verdana",Geneva, sans-serif;
-}
-
-div.game h1 {
-    font-size: 36px;
-    text-align: center;
-}
-
-.stats {
+.scoreboard {
     font-size: 24px;
 }
-
-p.statsheadline {
+.scoreboard-head {
     text-decoration: underline;
     margin-bottom: 10px;
 }
-
-p.statsplayer {
+.scoreboard-player {
     padding: 0;
     margin: 0;
 }

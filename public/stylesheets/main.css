@@ -27,14 +27,14 @@
 }
 .player-table {
     width: 200px;
-    height: 250px;
-    border-collapse: collapse;
+    height: 200px;
     display:inline-table;
     float: left;
     margin: 50px;
+    border: 2px solid black;
 }
 .player-name {
-    border: 2px solid black;
+border: 2px solid black;
 }
 .player-row {
     font-size: 24px;

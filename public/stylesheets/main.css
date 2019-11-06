@@ -1,25 +1,22 @@
 .about {
     height: 100%;
-    width: 100%;
+    width: 98%;
+    margin: 1em;
+    font-size:16px;
+    font-family: "Verdana",Geneva, sans-serif;
+    color:black;
+}
+.gamecontainer {
+    height: 100%;
+    width: 98%;
     margin: 1em;
     font-size:16px;
     font-family: "Verdana",Geneva, sans-serif;
     color:black;
 }
 
-a:link, a:visited {
-    background-color: white;
-    color: black;
-    border: 2px solid green;
-    padding: 14px 25px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-}
-
-a:hover, a:active {
-    background-color: green;
-    color: white;
+.dropdown-item:active{
+    background-color: black;
 }
 
 div.player table, div.player td {

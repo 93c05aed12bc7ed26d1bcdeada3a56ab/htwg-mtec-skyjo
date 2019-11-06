@@ -41,7 +41,7 @@
     border: 2px solid black;
 }
 .player-row {
-    font-size: 40px;
+    font-size: 35px;
     height: 50px;
 }
 .player-col {
@@ -63,4 +63,10 @@
 .scoreboard-player {
     padding: 0;
     margin: 0;
+}
+
+.head-table {
+    border: 2px solid black;
+    vertical-align: middle;
+    text-align: center;
 }

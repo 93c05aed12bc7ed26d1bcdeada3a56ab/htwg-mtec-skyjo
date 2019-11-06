@@ -39,8 +39,8 @@
 
     <div class="container-fluid">
         <div class="row gameboard">
-            @for(player <- 0 until players.length) {
-                <div class="player">
+            <div class="col-10 player">
+                @for(player <- 0 until players.length) {
                     <div class="container-fluid player-table">
                         <div class="row player-row">
                             <div class="col player-name"> @players(player).name </div>
@@ -64,9 +64,10 @@
                             <div class="col-3 player-col"> @players(player).hand.cards(2)(3).getValue </div>
                         </div>
                     </div>
-                </div>
-            }
-            <div class="scoreboard">
+                }
+
+            </div>
+            <div class="col scoreboard">
                 <div class="scoreboard-head">Scoreboard:</div>
                 @for(player <- 0 until players.length) {
                     <div class="scoreboard-player">@players(player).name: 0</div>

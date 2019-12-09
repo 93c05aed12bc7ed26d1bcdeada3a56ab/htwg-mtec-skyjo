@@ -31,9 +31,4 @@ class HomeController @Inject()(cc: ControllerComponents) extends AbstractControl
     gameController.uncoverCard(gameController.players(player))
     Ok(views.html.game(gameController))
   }
-
-  def uncoverToJson = Action {
-    Ok(gameController.players)
-  }
-
 }

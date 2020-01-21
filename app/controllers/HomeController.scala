@@ -4,6 +4,7 @@ import de.htwg.se.skyjo.Skyjo
 import javax.inject._
 import play.api.mvc._
 
+
 @Singleton
 class HomeController @Inject()(cc: ControllerComponents) extends AbstractController(cc) {
 
@@ -14,11 +15,8 @@ class HomeController @Inject()(cc: ControllerComponents) extends AbstractControl
   }
 
   def skyjo = Action {
+    gameController.newGame()
     Ok(views.html.game(gameController))
-  }
-
-  def playerList = Action {
-    Ok(gameController.players.toString())
   }
 
   def addPlayer(player: String) = Action {
@@ -27,8 +25,11 @@ class HomeController @Inject()(cc: ControllerComponents) extends AbstractControl
   }
 
   def uncover(posX: Int, posY: Int, player: Int) = Action {
-    gameController.setCursor(posX, posY, gameController.players(player))
-    gameController.uncoverCard(gameController.players(player))
+    gameController.doMove(posX, posY, player)
+    Ok(views.html.game(gameController))
+  }
+  def getCard(posY: Int, posX: Int, player: Int) = Action {
+    gameController.getCard(posY, posX, player)
     Ok(views.html.game(gameController))
   }
 }

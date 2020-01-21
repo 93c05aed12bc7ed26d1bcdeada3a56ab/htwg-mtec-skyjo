@@ -5,7 +5,7 @@
 
 # An example controller showing a sample home page
 GET     /                           controllers.HomeController.skyjo
-GET     /playerList                 controllers.HomeController.playerList
+# GET     /playerList                 controllers.HomeController.playerList
 
 GET     /uncover/:posX/:posY/:player    controllers.HomeController.uncover(posX:Int, posY: Int, player:Int)
 GET     /newPlayer/:player          controllers.HomeController.addPlayer(player: String)

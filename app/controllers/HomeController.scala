@@ -15,6 +15,10 @@ class HomeController @Inject()(cc: ControllerComponents) extends AbstractControl
   }
 
   def skyjo = Action {
+    Ok(views.html.game(gameController))
+  }
+
+  def newGame = Action {
     gameController.newGame()
     Ok(views.html.game(gameController))
   }

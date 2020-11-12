@@ -1,7 +1,6 @@
 function setNewPlayer() {
     let element = document.getElementById("newplayername").value;
     if (element != "") {
-        alert("New Player created: " + element);
         location.href='/newPlayer/' + element;
     } else
         alert("Please input Player Name");

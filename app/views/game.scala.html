@@ -38,7 +38,7 @@
     </nav>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-10">
+            <div class="col-9">
                 <div class="row gamedeck">
                     <div class="row head-table">
                         <div class="col deckAndPile" onclick="tradeCard()">
@@ -81,7 +81,7 @@
                 </div>
             </div>
             <div class="col scoreboard">
-                <div class="scoreboard-head">Scoreboard:</div>
+                <div class="scoreboard-head">Scoreboard</div>
                 @for(player <- 0 until gameBoard.getPlayerListSize) {
                 <div class="scoreboard-player">@gameBoard.getPlayerName(player) @gameBoard.getPlayerPoints(player)</div>
                 }

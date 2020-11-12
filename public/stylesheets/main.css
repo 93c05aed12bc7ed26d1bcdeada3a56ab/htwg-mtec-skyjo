@@ -39,7 +39,15 @@
     vertical-align: middle;
     text-align: center;
 }
-.player-name { }
+.player-name {
+    display: block;
+    font-size: 20px;
+    justify-content: center;
+    width: 213px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
 
 .player-row {
     font-size: 35px;
@@ -60,8 +68,10 @@
     margin-top: 15px;
 }
 .scoreboard-head {
-    text-decoration: underline;
+    /*text-decoration: underline;*/
     margin-bottom: 10px;
+    width: 100%;
+    border-bottom: 2px solid black;
 }
 .scoreboard-player {
     padding: 0;

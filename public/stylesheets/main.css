@@ -39,7 +39,15 @@
     vertical-align: middle;
     text-align: center;
 }
-.player-name { }
+.player-name {
+    display: block;
+    font-size: 20px;
+    justify-content: center;
+    width: 213px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
 
 .player-row {
     font-size: 35px;

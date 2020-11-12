@@ -47,4 +47,14 @@ class HomeController @Inject()(cc: ControllerComponents) extends AbstractControl
     Ok(views.html.game(gameController))
   }
 
+  def undo() = Action {
+    gameController.undo
+    Ok(views.html.game(gameController))
+  }
+
+  def redo() = Action {
+    gameController.redo
+    Ok(views.html.game(gameController))
+  }
+
 }

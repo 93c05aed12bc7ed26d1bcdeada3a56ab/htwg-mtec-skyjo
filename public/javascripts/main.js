@@ -9,3 +9,11 @@ function setNewPlayer() {
 function uncover(x, y, player) {
     location.href='/uncover/' + x + '/' + y + '/' + player;
 }
+
+function drawCard() {
+    location.href='/drawCard';
+}
+
+function tradeCard() {
+    location.href='/tradeCard';
+}

@@ -37,4 +37,14 @@ class HomeController @Inject()(cc: ControllerComponents) extends AbstractControl
     Ok(views.html.game(gameController))
   }
 
+  def drawCard() = Action {
+    gameController.drawCard
+    Ok(views.html.game(gameController))
+  }
+
+  def tradeCard() = Action {
+    gameController.trade = true
+    Ok(views.html.game(gameController))
+  }
+
 }

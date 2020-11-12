@@ -10,6 +10,8 @@ GET     /uncover/:posX/:posY/:player    controllers.HomeController.uncover(posY:
 GET     /newPlayer/:player          controllers.HomeController.addPlayer(player: String)
 GET     /about                      controllers.HomeController.about
 GET     /newGame                    controllers.HomeController.newGame
+GET     /drawCard                   controllers.HomeController.drawCard
+GET     /tradeCard                  controllers.HomeController.tradeCard
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)

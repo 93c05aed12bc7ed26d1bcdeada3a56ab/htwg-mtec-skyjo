@@ -41,10 +41,10 @@
             <div class="col-10">
                 <div class="row gamedeck">
                     <div class="row head-table">
-                        <div class="col deckAndPile">
-                            #
+                        <div class="col deckAndPile" onclick="tradeCard()">
+                            @gameBoard.getDiscardPileTop
                         </div>
-                        <div class="col deckAndPile">
+                        <div class="col deckAndPile" onclick="drawCard()">
                             #
                         </div>
                     </div>

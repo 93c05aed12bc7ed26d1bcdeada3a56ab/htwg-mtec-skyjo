@@ -25,6 +25,8 @@
 }
 
 .gamedeck {
+    display: flex;
+    justify-content: center;
 }
 
 .player-table {
@@ -37,20 +39,21 @@
     vertical-align: middle;
     text-align: center;
 }
-.player-name {
-    border: 2px solid black;
-}
+.player-name { }
+
 .player-row {
     font-size: 35px;
     height: 50px;
+    line-height: 50px;
 }
 .player-col {
-    border: 2px solid black;
+    border: 1px solid black;
     padding: 0px;
 }
 .player-col:hover {
     background-color: black;
     color: white;
+    cursor: pointer;
 }
 .scoreboard {
     font-size: 24px;
@@ -69,4 +72,18 @@
     border: 2px solid black;
     vertical-align: middle;
     text-align: center;
+    display: flex;
+    margin-top: 15px;
+}
+
+.container-fluid.player-table .player-row:first-child {
+    border: 1px solid black;
+}
+
+.deckAndPile {
+    cursor: pointer;
+}
+
+#navbarDropdownMenuLink {
+    cursor: pointer;
 }

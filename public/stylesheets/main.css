@@ -90,7 +90,9 @@
     border: 1px solid black;
 }
 
-.deckAndPile {
+.deckAndPile:hover {
+    background-color: black;
+    color: white;
     cursor: pointer;
 }
 

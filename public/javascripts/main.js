@@ -7,13 +7,16 @@ function setNewPlayer() {
 }
 
 function uncover(x, y, player) {
-    location.href='/uncover/' + x + '/' + y + '/' + player;
+    //location.href='/uncover/' + x + '/' + y + '/' + player;
+    let obj = {uncover:"", player:player, x:x, y:y};
+    let myJson = JSON.stringify(obj);
+    $.post("/uncover", myJson)
 }
 
 function drawCard() {
-    location.href='/drawCard';
+    $.get("/drawCard")
 }
 
 function tradeCard() {
-    location.href='/tradeCard';
+    $.get("/tradeCard")
 }

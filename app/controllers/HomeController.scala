@@ -2,6 +2,7 @@ package controllers
 
 import de.htwg.se.skyjo.Skyjo
 import javax.inject._
+import play.api.libs.json.{JsResult, JsSuccess, JsValue}
 import play.api.mvc._
 
 @Singleton
@@ -54,11 +55,6 @@ class HomeController @Inject()(cc: ControllerComponents) extends AbstractControl
 
   def redo() = Action {
     gameController.redo
-    Ok(views.html.game(gameController))
-  }
-
-  def load() = Action {
-    gameController.load()
     Ok(views.html.game(gameController))
   }
 

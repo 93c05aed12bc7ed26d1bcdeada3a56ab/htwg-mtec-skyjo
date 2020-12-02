@@ -96,6 +96,8 @@
     cursor: pointer;
 }
 
-#navbarDropdownMenuLink {
+#navbarDropdownMenuLink, .navibuttons{
     cursor: pointer;
 }
+
+

@@ -58,4 +58,8 @@ class HomeController @Inject()(cc: ControllerComponents) extends AbstractControl
     Ok(views.html.game(gameController))
   }
 
+  def load = Action {
+    Ok(gameController.gameBoardtoJson)
+  }
+
 }

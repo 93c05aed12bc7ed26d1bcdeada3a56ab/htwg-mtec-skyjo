@@ -7,7 +7,9 @@ function setNewPlayer() {
 }
 
 function uncover(x, y, player) {
+console.log("entered uncover");
     $.get('/uncover/' + x + '/' + y + '/' + player);
+    console.log("blub1");
     getGameBoardFromJson();
 }
 
@@ -41,20 +43,24 @@ function about(){
 }
 
 function registerClickListener(json) {
+    let y = 0;
+    let x = 0;
     for (let i=0; i<json.gameBoard.numPlayer; i++){
         for (let j=0; j<12; j++) {
-            if (x > 4)
-                var x = j/4;
-            else
-                var x = j;
-            var y = j%4;
+            console.log("j: "+ j+ " x: "+x+" y: "+ y+ " i: "+i);
             $("#player"+j+i).click(function() {uncover(x, y, i)});
+            x++;
+            if (x === 4) {
+            x = 0;
+            y++;
+            }
         }
     }
 }
 
 function updateGameBoard(json){
-
+    console.log(json);
+    console.log("entered updateGameBoard");
     for (let i=0; i<json.gameBoard.numPlayer; i++){
         for (let j=0; j<12; j++) {
             if (json.gameBoard.player[0][i].hand[0].card.isUncovered === true){
@@ -74,12 +80,12 @@ function getGameBoardFromJson(){
 
         success: function (result) {
             updateGameBoard(result);
-            registerClickListener(json)
+            registerClickListener(result)
         }
     });
 }
 
 $( document ).ready(function() {
     console.log( "Document is ready, filling grid" );
-    getGameBoardFromJson()
+    getGameBoardFromJson();
 });

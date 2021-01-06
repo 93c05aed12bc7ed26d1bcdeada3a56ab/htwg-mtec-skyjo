@@ -107,11 +107,7 @@ function updateGameBoard(){
         `);
 
         $("#trade").html(jsonResult.gameBoard.deck.discardPile[jsonResult.gameBoard.numDiscardPile-1][1].value);
-        $("#scoreboard").html("");
-        $("#scoreboard").append('<div class="scoreboard-head">Scoreboard</div>');
-        for(let i=0; i<jsonResult.gameBoard.numPlayer; i++){
-            $("#scoreboard").append(`<div class="scoreboard-player">${jsonResult.gameBoard.player[0][i].name} ${jsonResult.gameBoard.player[0][i].points}</div>`);
-        }
+
     } else {
         $("#gamedeck").html("");
         $("#scoreboard").html("");

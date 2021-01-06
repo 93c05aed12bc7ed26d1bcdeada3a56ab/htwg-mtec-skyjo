@@ -95,24 +95,6 @@ function updateGameBoard(){
         `);
     }
 
-    if(jsonResult.gameBoard.numPlayer > 0){
-
-        $("#gamedeck").html(`
-            <div class="row head-table">
-            <div id="trade" class="col deckAndPile"></div>
-            <div id="draw" class="col deckAndPile">
-                #
-            </div>
-        </div>
-        `);
-
-        $("#trade").html(jsonResult.gameBoard.deck.discardPile[jsonResult.gameBoard.numDiscardPile-1][1].value);
-
-    } else {
-        $("#gamedeck").html("");
-        $("#scoreboard").html("");
-    }
-
     for (let i=0; i<jsonResult.gameBoard.numPlayer; i++){
         for (let j=0; j<12; j++) {
             if (jsonResult.gameBoard.player[0][i].hand[j].card.isUncovered === true){
@@ -125,6 +107,10 @@ function updateGameBoard(){
 
 }
 
+let discardPile;
+let skyjoScore;
+let gameBoardEmpty=true;
+
 function getGameBoardFromJson(){
     console.log("json daten holen (GET /json)");
     $.ajax({
@@ -134,6 +120,14 @@ function getGameBoardFromJson(){
 
         success: function (result) {
             jsonResult = result;
+            discardPile = jsonResult.gameBoard.deck.discardPile[jsonResult.gameBoard.numDiscardPile-1][1].value;
+            for(let i=0; i<jsonResult.gameBoard.numplayer; i++){
+                skyjoScore.push({name: jsonResult.gameBoard.player[0][i].name, points: jsonResult.gameBoard.player[0][i].points});
+            }
+            if(jsonResult.gameBoard.numplayer > 0){
+                gameBoardEmpty = true;
+            }
+
             updateGameBoard();
             registerClickListener();
         }
@@ -160,6 +154,14 @@ function connectWebSocket(){
         if(typeof e.data === "string") {
             console.log("Retrieve json from Server")
             jsonResult = JSON.parse(e.data);
+            discardPile = jsonResult.gameBoard.deck.discardPile[jsonResult.gameBoard.numDiscardPile-1][1].value;
+            for(let i=0; i<jsonResult.gameBoard.numplayer; i++){
+                skyjoScore.push({name: jsonResult.gameBoard.player[0][i].name, points: jsonResult.gameBoard.player[0][i].points});
+            }
+            if(jsonResult.gameBoard.numplayer > 0){
+                gameBoardEmpty = true;
+            }
+
             updateGameBoard();
             registerClickListener();
         }

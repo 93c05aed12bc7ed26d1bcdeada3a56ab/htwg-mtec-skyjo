@@ -1,13 +1,12 @@
-let skyjoScore =[{name: "", points: ""}]
-for(let i=0; i<jsonResult.gameBoard.numPlayer; i++){
-    skyjoScore.push({name: jsonResult.gameBoard.player[0][i].name, points: jsonResult.gameBoard.player[0][i].points})
-}
-
 
 $( document ).ready(function() {
-    var scoreboard = new Vue({
+    var skyjo = new Vue({
         el: '#skyjo-game',
+        data: {
+            isDefined: gameBoardEmpty
+        }
     })
+
 });
 
 
@@ -21,6 +20,22 @@ Vue.component('skyjo-scoreboard', {
     data: function () {
         return {
             scoreboardPlayers: skyjoScore
+        }
+    }
+})
+
+Vue.component('skyjo-gamedeck', {
+    template:`
+        <div class="row head-table">
+            <div id="trade" class="col deckAndPile">{{ discardPileValue }}</div>
+            <div id="draw" class="col deckAndPile">
+                #
+            </div>
+        </div>
+    `,
+    data: function () {
+        return {
+            discardPileValue: discardPile
         }
     }
 })

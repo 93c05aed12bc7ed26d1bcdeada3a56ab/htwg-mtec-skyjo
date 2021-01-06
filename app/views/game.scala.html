@@ -40,17 +40,14 @@
         </div>
     </nav>
     <div class="container-fluid">
-        <div class="row">
+        <div id="skyjo-game" v-if=isDefined class="row">
             <div class="col-9">
-                <div id="gamedeck" class="row gamedeck"></div>
+                <skyjo-gamedeck></skyjo-gamedeck>
                 <div class="row gameboard">
                     <div id="playerBoard" class="col player"></div>
                 </div>
             </div>
-
-            <div id="skyjo-game">
-                <skyjo-scoreboard></skyjo-scoreboard>
-            </div>
+            <skyjo-scoreboard></skyjo-scoreboard>
 
         </div>
 

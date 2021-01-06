@@ -1,28 +1,26 @@
+let skyjoScore =[{name: "", points: ""}]
+for(let i=0; i<jsonResult.gameBoard.numPlayer; i++){
+    skyjoScore.push({name: jsonResult.gameBoard.player[0][i].name, points: jsonResult.gameBoard.player[0][i].points})
+}
+
+
 $( document ).ready(function() {
     var scoreboard = new Vue({
-        el: '#scoreboard',
-        data: {
-            name: jsonResult.gameBoard.player[0][0].name
-        }
+        el: '#skyjo-game',
     })
-})
+});
 
 
-Vue.component('sudoku-highlight-button-bar', {
+Vue.component('skyjo-scoreboard', {
     template:`
-        <div class="buttonbarcontainer">
-            <label>
-                Highlight
-            </label>
-            <div  class=" btn-group" >
-                <a v-for="item in menuItems" v-bind:href="item.link" class="btn btn-primary"> {{item.text}} </a>
-            </div>
+        <div id="scoreboard" class="col scoreboard">
+            <div class="scoreboard-head">Scoreboard</div>
+            <div v-for="p in scoreboardPlayers" class="scoreboard-player">{{ p.name }} {{ p.points }}</div>
         </div>
     `,
     data: function () {
         return {
-            menuItems: sudokuHighlightButtons
+            scoreboardPlayers: skyjoScore
         }
     }
-
 })

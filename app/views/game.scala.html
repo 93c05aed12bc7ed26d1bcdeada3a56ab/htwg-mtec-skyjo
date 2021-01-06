@@ -3,7 +3,7 @@
 @gameBoard = @{controller}
 
 @main("HTWG Skyjo") {
-<script src="@routes.Assets.versioned("javascripts/vue.js")" ></script>
+
 <script src="@routes.Assets.versioned("javascripts/skyjoVue.js")" ></script>
 
 <div class="gamecontainer">
@@ -47,13 +47,11 @@
                     <div id="playerBoard" class="col player"></div>
                 </div>
             </div>
-            <div id="scoreboard" class="col scoreboard">
 
-                <div class="scoreboard-head">Scoreboard</div>
-                <div class="scoreboard-player">{{ name }}</div>
-
-
+            <div id="skyjo-game">
+                <skyjo-scoreboard></skyjo-scoreboard>
             </div>
+
         </div>
 
     </div>

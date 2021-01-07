@@ -27,7 +27,7 @@ Vue.component('skyjo-scoreboard', {
 Vue.component('skyjo-gamedeck', {
     template:`
         <div class="row head-table">
-            <div id="trade" class="col deckAndPile">{{ dpv }}</div>
+            <div id="trade" v-for="d in dpv" class="col deckAndPile">{{ d }}</div>
             <div id="draw" class="col deckAndPile">#</div>
         </div>
     `,

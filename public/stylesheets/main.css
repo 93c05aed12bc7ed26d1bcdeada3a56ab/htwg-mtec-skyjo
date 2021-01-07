@@ -84,6 +84,8 @@
     text-align: center;
     display: flex;
     margin-top: 15px;
+    max-width: 150px;
+    max-height: 29px;
 }
 
 .container-fluid.player-table .player-row:first-child {
@@ -100,4 +102,11 @@
     cursor: pointer;
 }
 
+.leftSideHeader {
+    display: flex;
+    text-align: -webkit-center;
+}
 
+.leftSideContainer {
+    width: 100%;
+}

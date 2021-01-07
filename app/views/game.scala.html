@@ -4,8 +4,6 @@
 
 @main("HTWG Skyjo") {
 
-<script src="@routes.Assets.versioned("javascripts/skyjoVue.js")" ></script>
-
 <div class="gamecontainer">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="/">Skyjo</a>
@@ -40,11 +38,13 @@
         </div>
     </nav>
     <div class="container-fluid">
-        <div id="skyjo-game" v-if=isDefined class="row">
-            <div class="col-9">
-                <skyjo-gamedeck></skyjo-gamedeck>
-                <div class="row gameboard">
-                    <div id="playerBoard" class="col player"></div>
+        <div id="skyjo-game" v-if="isDefined" class="row">
+            <div class="col-9 leftSideHeader">
+                <div class="leftSideContainer">
+                    <skyjo-gamedeck></skyjo-gamedeck>
+                    <div class="row gameboard">
+                        <div id="playerBoard" class="col player"></div>
+                    </div>
                 </div>
             </div>
             <skyjo-scoreboard></skyjo-scoreboard>

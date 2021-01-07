@@ -107,7 +107,7 @@ function updateGameBoard(){
 
 }
 
-let discardPile = [];
+let dp;
 let skyjoScore = [];
 let gameBoardEmpty=true;
 
@@ -120,9 +120,9 @@ function getGameBoardFromJson(){
 
         success: function (result) {
             jsonResult = result;
-            discardPile.length = 0;
-            discardPile.push(jsonResult.gameBoard.deck.discardPile[0][1].value);
-            console.log(discardPile)
+            dp = jsonResult.gameBoard.deck.discardPile[0][1].value;
+
+            skyjoScore.length = 0;
             for(let i=0; i<jsonResult.gameBoard.numPlayer; i++){
                 skyjoScore.push({name: jsonResult.gameBoard.player[0][i].name, points: jsonResult.gameBoard.player[0][i].points});
             }
@@ -156,9 +156,9 @@ function connectWebSocket(){
         if(typeof e.data === "string") {
             console.log("Retrieve json from Server")
             jsonResult = JSON.parse(e.data);
-            discardPile.length = 0;
-            discardPile.push(jsonResult.gameBoard.deck.discardPile[0][1].value);
+            dp = jsonResult.gameBoard.deck.discardPile[0][1].value;
             skyjoScore.length = 0;
+
             for(let i=0; i<jsonResult.gameBoard.numPlayer; i++){
                 skyjoScore.push({name: jsonResult.gameBoard.player[0][i].name, points: jsonResult.gameBoard.player[0][i].points});
             }

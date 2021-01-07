@@ -6,12 +6,9 @@ $( document ).ready(function() {
             isDefined: gameBoardEmpty
         }
     })
-    setTimeout(blab,5000);
+
 });
 
-function blab() {
-console.log(gameBoardEmpty);
-}
 
 Vue.component('skyjo-scoreboard', {
     template:`
@@ -30,15 +27,13 @@ Vue.component('skyjo-scoreboard', {
 Vue.component('skyjo-gamedeck', {
     template:`
         <div class="row head-table">
-            <div  v-for="d in discardPileValue" id="trade" class="col deckAndPile">{{ d }}</div>
-            <div id="draw" class="col deckAndPile">
-                #
-            </div>
+            <div id="trade" class="col deckAndPile">{{ dpv }}</div>
+            <div id="draw" class="col deckAndPile">#</div>
         </div>
     `,
     data: function () {
         return {
-            discardPileValue: discardPile
+            dpv: dp
         }
     }
 })

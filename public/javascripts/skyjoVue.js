@@ -27,15 +27,13 @@ Vue.component('skyjo-scoreboard', {
 Vue.component('skyjo-gamedeck', {
     template:`
         <div class="row head-table">
-            <div id="trade" class="col deckAndPile">{{ discardPileValue }}</div>
-            <div id="draw" class="col deckAndPile">
-                #
-            </div>
+            <div id="trade" class="col deckAndPile">{{ dpv }}</div>
+            <div id="draw" class="col deckAndPile">#</div>
         </div>
     `,
     data: function () {
         return {
-            discardPileValue: discardPile
+            dpv: dp
         }
     }
 })

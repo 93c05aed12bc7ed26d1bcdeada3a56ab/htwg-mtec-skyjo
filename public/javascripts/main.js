@@ -107,8 +107,8 @@ function updateGameBoard(){
 
 }
 
-let discardPile;
-let skyjoScore;
+let dp;
+let skyjoScore = [];
 let gameBoardEmpty=true;
 
 function getGameBoardFromJson(){
@@ -120,11 +120,13 @@ function getGameBoardFromJson(){
 
         success: function (result) {
             jsonResult = result;
-            discardPile = jsonResult.gameBoard.deck.discardPile[jsonResult.gameBoard.numDiscardPile-1][1].value;
-            for(let i=0; i<jsonResult.gameBoard.numplayer; i++){
+            dp = jsonResult.gameBoard.deck.discardPile[0][1].value;
+
+            skyjoScore.length = 0;
+            for(let i=0; i<jsonResult.gameBoard.numPlayer; i++){
                 skyjoScore.push({name: jsonResult.gameBoard.player[0][i].name, points: jsonResult.gameBoard.player[0][i].points});
             }
-            if(jsonResult.gameBoard.numplayer > 0){
+            if(jsonResult.gameBoard.numPlayer > 0){
                 gameBoardEmpty = true;
             }
 
@@ -154,11 +156,13 @@ function connectWebSocket(){
         if(typeof e.data === "string") {
             console.log("Retrieve json from Server")
             jsonResult = JSON.parse(e.data);
-            discardPile = jsonResult.gameBoard.deck.discardPile[jsonResult.gameBoard.numDiscardPile-1][1].value;
-            for(let i=0; i<jsonResult.gameBoard.numplayer; i++){
+            dp = jsonResult.gameBoard.deck.discardPile[0][1].value;
+            skyjoScore.length = 0;
+
+            for(let i=0; i<jsonResult.gameBoard.numPlayer; i++){
                 skyjoScore.push({name: jsonResult.gameBoard.player[0][i].name, points: jsonResult.gameBoard.player[0][i].points});
             }
-            if(jsonResult.gameBoard.numplayer > 0){
+            if(jsonResult.gameBoard.numPlayer > 0){
                 gameBoardEmpty = true;
             }
 

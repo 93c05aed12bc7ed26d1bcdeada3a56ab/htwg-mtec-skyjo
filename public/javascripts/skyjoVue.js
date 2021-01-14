@@ -1,4 +1,3 @@
-
 $( document ).ready(function() {
     var skyjo = new Vue({
         el: '#skyjo-game',

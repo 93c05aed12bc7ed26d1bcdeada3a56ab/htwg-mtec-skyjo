@@ -1,0 +1,523 @@
+{
+  "gameBoard" : {
+    "deck" : {
+      "discardPile" : [ [ "card", {
+        "value" : -2,
+        "isUncovered" : true
+      } ] ],
+      "cards" : [ [ "card", {
+        "value" : 1,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 2,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 2,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 8,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 1,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 3,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 9,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 5,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 6,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 7,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 7,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 12,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 1,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 11,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 0,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 5,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 5,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 4,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 5,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 6,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : -1,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 3,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 1,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 8,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 3,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 11,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 6,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 3,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 11,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 11,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 1,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 3,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 11,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 10,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 10,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : -1,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 12,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 9,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 4,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 8,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 7,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 0,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : -1,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 10,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : -1,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 7,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 5,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 12,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 0,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 0,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 1,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 1,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 5,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 7,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 9,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 8,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 7,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 0,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 12,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 10,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : -1,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 6,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 9,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 5,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 5,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 0,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 2,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : -1,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 2,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 2,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 8,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 4,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 0,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : -1,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 3,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 6,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 2,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 9,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 2,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 9,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 8,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 11,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 4,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : -1,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 6,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : -1,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 8,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 8,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 0,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : -2,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 1,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 7,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : -2,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 3,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 12,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 3,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 4,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : -2,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : -2,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 2,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 7,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 2,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 9,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 6,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 6,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : -2,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 4,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 3,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 4,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 12,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 5,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 12,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 9,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : -2,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 6,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 7,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 6,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 10,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 0,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 4,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 9,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 10,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 11,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 7,
+        "isUncovered" : false
+      } ], [ "card", {
+        "value" : 5,
+        "isUncovered" : false
+      } ] ]
+    },
+    "player" : [ [ {
+      "name" : "Gebe die Namen der Spieler ein. (Mit '",
+      "points" : 0,
+      "hand" : [ {
+        "card" : {
+          "value" : -2,
+          "isUncovered" : false
+        }
+      }, {
+        "card" : {
+          "value" : 9,
+          "isUncovered" : false
+        }
+      }, {
+        "card" : {
+          "value" : 10,
+          "isUncovered" : false
+        }
+      }, {
+        "card" : {
+          "value" : 12,
+          "isUncovered" : false
+        }
+      }, {
+        "card" : {
+          "value" : 2,
+          "isUncovered" : false
+        }
+      }, {
+        "card" : {
+          "value" : 4,
+          "isUncovered" : false
+        }
+      }, {
+        "card" : {
+          "value" : 10,
+          "isUncovered" : false
+        }
+      }, {
+        "card" : {
+          "value" : 12,
+          "isUncovered" : false
+        }
+      }, {
+        "card" : {
+          "value" : 8,
+          "isUncovered" : false
+        }
+      }, {
+        "card" : {
+          "value" : 1,
+          "isUncovered" : false
+        }
+      }, {
+        "card" : {
+          "value" : 11,
+          "isUncovered" : false
+        }
+      }, {
+        "card" : {
+          "value" : 10,
+          "isUncovered" : false
+        }
+      } ],
+      "stillMyTurn" : false,
+      "canDrawCard" : true
+    }, {
+      "name" : "' getrennt)",
+      "points" : 0,
+      "hand" : [ {
+        "card" : {
+          "value" : 4,
+          "isUncovered" : false
+        }
+      }, {
+        "card" : {
+          "value" : 12,
+          "isUncovered" : false
+        }
+      }, {
+        "card" : {
+          "value" : 8,
+          "isUncovered" : false
+        }
+      }, {
+        "card" : {
+          "value" : -1,
+          "isUncovered" : false
+        }
+      }, {
+        "card" : {
+          "value" : 1,
+          "isUncovered" : false
+        }
+      }, {
+        "card" : {
+          "value" : -2,
+          "isUncovered" : false
+        }
+      }, {
+        "card" : {
+          "value" : 10,
+          "isUncovered" : false
+        }
+      }, {
+        "card" : {
+          "value" : 3,
+          "isUncovered" : false
+        }
+      }, {
+        "card" : {
+          "value" : -2,
+          "isUncovered" : false
+        }
+      }, {
+        "card" : {
+          "value" : 11,
+          "isUncovered" : false
+        }
+      }, {
+        "card" : {
+          "value" : 11,
+          "isUncovered" : false
+        }
+      }, {
+        "card" : {
+          "value" : 0,
+          "isUncovered" : false
+        }
+      } ],
+      "stillMyTurn" : false,
+      "canDrawCard" : true
+    } ] ],
+    "turn" : 0,
+    "numPlayer" : 2,
+    "numDiscardPile" : 1,
+    "numCards" : 125
+  }
+}

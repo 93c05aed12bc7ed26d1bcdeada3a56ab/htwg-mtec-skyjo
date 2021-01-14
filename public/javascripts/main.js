@@ -109,7 +109,7 @@ function updateGameBoard(){
 
 let dp = [];
 let skyjoScore = [];
-let gameBoardEmpty=true;
+let gameBoardEmpty = [false];
 
 function getGameBoardFromJson(){
     console.log("json daten holen (GET /json)");
@@ -127,8 +127,11 @@ function getGameBoardFromJson(){
             for(let i=0; i<jsonResult.gameBoard.numPlayer; i++){
                 skyjoScore.push({name: jsonResult.gameBoard.player[0][i].name, points: jsonResult.gameBoard.player[0][i].points});
             }
+            gameBoardEmpty.length = 0;
             if(jsonResult.gameBoard.numPlayer > 0){
-                gameBoardEmpty = true;
+                gameBoardEmpty.push(true);
+            }else {
+                gameBoardEmpty.push(false);
             }
 
             updateGameBoard();
@@ -164,8 +167,11 @@ function connectWebSocket(){
             for(let i=0; i<jsonResult.gameBoard.numPlayer; i++){
                 skyjoScore.push({name: jsonResult.gameBoard.player[0][i].name, points: jsonResult.gameBoard.player[0][i].points});
             }
+            gameBoardEmpty.length = 0;
             if(jsonResult.gameBoard.numPlayer > 0){
-                gameBoardEmpty = true;
+                gameBoardEmpty.push(true);
+            }else {
+                gameBoardEmpty.push(false);
             }
 
             updateGameBoard();
@@ -179,4 +185,5 @@ $( document ).ready(function() {
     console.log( "Document is ready" );
     getGameBoardFromJson();
     connectWebSocket();
+
 });

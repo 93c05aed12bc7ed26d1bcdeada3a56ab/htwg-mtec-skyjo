@@ -39,9 +39,10 @@
     text-align: center;
 }
 .player-name {
-    display: block;
+    display: flex;
     font-size: 30px;
-    justify-content: center;
+    justify-content: flex-end;
+    flex-direction: column;
     width: 213px;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -60,11 +61,17 @@
 .player-col {
 
     padding: 0px;
+    font-size: 26px;
 }
 .player-col:hover {
 
     cursor: pointer;
 }
+
+#trade.deckAndPile {
+    font-size: 26px;
+}
+
 .scoreboard {
     font-size: 24px;
     margin-top: 15px;

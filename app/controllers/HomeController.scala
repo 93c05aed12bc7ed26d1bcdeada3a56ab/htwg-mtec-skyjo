@@ -17,6 +17,11 @@ class HomeController @Inject()(cc: ControllerComponents) (implicit system: Actor
 
   val gameController = Skyjo.controller
 
+  def offline() = Action {
+    implicit request: Request[AnyContent] =>
+      Ok(views.html.offline())
+  }
+
   def about() = Action {
     Ok(views.html.index())
   }

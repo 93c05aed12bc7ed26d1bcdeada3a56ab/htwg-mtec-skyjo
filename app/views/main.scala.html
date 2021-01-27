@@ -23,6 +23,10 @@
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/main.css")">
+
+        <link rel="manifest" href="@routes.Assets.versioned("manifest.json")" crossorigin="use-credentials"/>
+
+
     </head>
     <body>
         @* And here's where we render the `Html` object containing
@@ -36,5 +40,7 @@
         <script crossorigin="anonymous"
                 integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
                 src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+        <script type="text/javascript" src="@routes.Assets.versioned("javascripts/sw.js")"></script>
     </body>
 </html>

@@ -4,7 +4,7 @@ import akka.actor._
 import de.htwg.se.skyjo.Skyjo
 import akka.actor.ActorSystem
 import akka.stream.Materializer
-import de.htwg.se.skyjo.controller.{BoardChanged, CandidatesChanged, GameOver, NewRound, Shutdown}
+import de.htwg.se.skyjo.controller.{ BoardChanged, CandidatesChanged, GameOver, NewRound, Shutdown }
 
 import javax.inject._
 import play.api.libs.streams.ActorFlow
@@ -13,7 +13,7 @@ import play.api.mvc._
 import scala.swing.Reactor
 
 @Singleton
-class HomeController @Inject()(cc: ControllerComponents) (implicit system: ActorSystem, mat: Materializer) extends AbstractController(cc) {
+class HomeController @Inject() (cc: ControllerComponents)(implicit system: ActorSystem, mat: Materializer) extends AbstractController(cc) {
 
   val gameController = Skyjo.controller
 
@@ -82,12 +82,12 @@ class HomeController @Inject()(cc: ControllerComponents) (implicit system: Actor
   }
 
   object SkyjoWebSocketActorFactory {
-    def create(out: ActorRef) =  {
+    def create(out: ActorRef) = {
       Props(new SkyjoWebSocketActor(out))
     }
   }
 
-  class SkyjoWebSocketActor(out: ActorRef) extends Actor with Reactor{
+  class SkyjoWebSocketActor(out: ActorRef) extends Actor with Reactor {
     listenTo(gameController)
 
     def receive = {
@@ -109,7 +109,5 @@ class HomeController @Inject()(cc: ControllerComponents) (implicit system: Actor
       out ! (gameController.gameBoardtoJson.toString)
     }
   }
-
-
 
 }

@@ -3,7 +3,11 @@ let jsonResult;
 function setNewPlayer() {
     let element = document.getElementById("newplayername").value;
     if (element != "") {
-        $.get('/newPlayer/' + element);
+        $.ajax({
+                method: "GET",
+                url: "/newPlayer/"+element,
+                dataType: "json"
+                });
         console.log("new player erstellt");
     } else
         alert("Please input Player Name");

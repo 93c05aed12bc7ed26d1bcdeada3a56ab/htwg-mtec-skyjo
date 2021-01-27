@@ -1,0 +1,15 @@
+{
+  "name": "Skyjo",
+  "short_name": "sky",
+  "start_url": "index.html",
+  "display": "standalone",
+  "theme_color": "#0476F2",
+  "background_color": "#fff",
+  "icons": [
+    {
+      "src": "./images/favicon.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    }
+  ]
+}

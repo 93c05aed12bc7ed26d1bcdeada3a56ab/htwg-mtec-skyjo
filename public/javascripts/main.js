@@ -149,7 +149,7 @@ function getGameBoardFromJson(){
 }
 
 function connectWebSocket(){
-    var websocket = new WebSocket("ws://skyjo-htwg.herokuapp.com/websocket");
+    var websocket = new WebSocket("wss://skyjo-htwg.herokuapp.com/websocket");
     websocket.setTimeout
 
     websocket.onopen = function(event) {

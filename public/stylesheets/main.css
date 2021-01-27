@@ -34,33 +34,35 @@
     height: 200px;
     float: left;
     margin: 25px;
-    border: 2px solid black;
     display:inline-table;
     vertical-align: middle;
     text-align: center;
 }
 .player-name {
     display: block;
-    font-size: 20px;
+    font-size: 30px;
     justify-content: center;
     width: 213px;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+    border-bottom: 2px solid black;
 }
 
 .player-row {
     font-size: 35px;
-    height: 50px;
+    height: 80px;
     line-height: 50px;
+        font-size: 40px;
+        vertical-align: middle;
+        text-align: center;
 }
 .player-col {
-    border: 1px solid black;
+
     padding: 0px;
 }
 .player-col:hover {
-    background-color: black;
-    color: white;
+
     cursor: pointer;
 }
 .scoreboard {
@@ -79,22 +81,19 @@
 }
 
 .head-table {
-    border: 2px solid black;
+    font-size: 40px;
     vertical-align: middle;
     text-align: center;
     display: flex;
     margin-top: 15px;
     max-width: 150px;
-    max-height: 29px;
+    max-height: 80px;
 }
 
 .container-fluid.player-table .player-row:first-child {
-    border: 1px solid black;
 }
 
 .deckAndPile:hover {
-    background-color: black;
-    color: white;
     cursor: pointer;
 }
 

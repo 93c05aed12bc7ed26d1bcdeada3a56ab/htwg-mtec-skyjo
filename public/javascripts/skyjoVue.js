@@ -28,7 +28,11 @@ Vue.component('skyjo-gamedeck', {
     template:`
         <div class="row head-table">
             <div id="trade" v-for="d in dpv" class="col deckAndPile">{{ d }}</div>
-            <div id="draw" class="col deckAndPile">#</div>
+            <div id="draw" class="col deckAndPile">
+                 <p>
+                     <img height="70" src="assets/images/Karte.jpg" width="50">
+                 </p>
+            </div>
         </div>
     `,
     data: function () {

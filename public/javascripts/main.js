@@ -101,7 +101,11 @@ function updateGameBoard(){
                 $("#player"+j+i).html(jsonResult.gameBoard.player[0][i].hand[j].card.value);
             }
             else
-                $("#player"+j+i).html("#");
+                $("#player"+j+i).append(`
+                     <p>
+                         <img height="70" src="assets/images/Karte.jpg" width="50">
+                     </p>
+                `);
         }
     }
 

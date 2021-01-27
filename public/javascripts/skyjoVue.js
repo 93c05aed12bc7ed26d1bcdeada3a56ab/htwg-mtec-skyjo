@@ -7,32 +7,3 @@ $( document ).ready(function() {
     })
 
 });
-
-
-Vue.component('skyjo-scoreboard', {
-    template:`
-        <div id="scoreboard" class="col scoreboard">
-            <div class="scoreboard-head">Scoreboard</div>
-            <div v-for="p in scoreboardPlayers" class="scoreboard-player">{{ p.name }} {{ p.points }}</div>
-        </div>
-    `,
-    data: function () {
-        return {
-            scoreboardPlayers: skyjoScore
-        }
-    }
-})
-
-Vue.component('skyjo-gamedeck', {
-    template:`
-        <div class="row head-table">
-            <div id="trade" v-for="d in dpv" class="col deckAndPile">{{ d }}</div>
-            <div id="draw" class="col deckAndPile">#</div>
-        </div>
-    `,
-    data: function () {
-        return {
-            dpv: dp
-        }
-    }
-})
